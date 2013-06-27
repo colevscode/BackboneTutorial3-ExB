@@ -1,0 +1,1 @@
+A photo gallery that displays images from the photos folder. Created for "Building backbone.js apps with Backlift Part 3: Users and Performance"

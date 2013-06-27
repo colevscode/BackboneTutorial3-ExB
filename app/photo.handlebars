@@ -1,0 +1,9 @@
+<div class="photo">
+  <img src="{{photo.url}}">
+  {{#each comments}}
+    <p>{{text}}</p>
+  {{/each}}
+  <form class="form-inline" id="{{photo.file}}">
+    <input type="text">
+  </form>  
+</div>

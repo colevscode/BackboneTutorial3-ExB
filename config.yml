@@ -1,0 +1,46 @@
+# -------------------------------------------------------------------
+# Backlift config.yml file. This file can be used to customize how 
+# your application is packaged when you run backlift push.
+# -------------------------------------------------------------------
+
+# scripts: These javascript files will be packaged and linked in 
+# order. File paths should be specified relative to the project root.
+# They should not be compressed. The * will match any string and **
+# will match any path.
+
+scripts:
+- /libraries/scripts/jquery.js
+- /libraries/scripts/underscore.js
+- /libraries/scripts/backbone.js
+- /libraries/scripts/handlebars.runtime.js
+- /libraries/scripts/*.js
+- /app/**/*.js
+
+
+# styles: These stylesheets will be packaged and linked in order, 
+# similar to scripts.
+
+styles:
+- /libraries/syles/bootstrap.css
+- /app/**/*.css
+
+# packages: define sets of additional libraries or functionality that
+# can be downloaded during app installation. Top-level key defines 
+# package name. Inside package, each key is a folder name, and each 
+# value is a github repository or gist. Github repos may specify a tag 
+# or branch via a tree url.
+
+packages:
+  include:
+    admin: 
+    - github.com/backlift/backlift-admin
+    libraries: 
+    - github.com/backlift/backbone-bundle
+    - github.com/backlift/bootstrap-bundle
+    libraries/scripts: 
+    - gist.github.com/backlift/5334085 # backlift-commonview.js  
+
+# require: which of the packages must be installed during 
+
+require:
+- include
